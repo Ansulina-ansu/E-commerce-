@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Product Page -->
+<main>
+    <div class="product-container">
+        <!-- Product Image Gallery -->
+        <div class="product-images">
+            <div class="main-image">
+                <img src="1.jpg" alt="Product Image" id="main-img">
+            </div>
+            <div class="image-thumbnails">
+                <img src="2.jpg" alt="Thumbnail 1" class="thumbnail">
+                <img src="3.jpg" alt="Thumbnail 2" class="thumbnail">
+                <img src="4.jpg" alt="Thumbnail 3" class="thumbnail">
+            </div>
+        </div>
+
+        <!-- Product Details -->
+        <div class="product-details">
+            <h1>Awesome Product</h1>
+            <p class="price">$99.99</p>
+            <p class="description">This is an awesome product description. It explains all the amazing features of the product.</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- Customer Reviews Section -->
+    <section class="reviews">
+        <h2>Customer Reviews</h2>
+        <div class="review">
+            <p class="review-text">"Amazing product! Highly recommend!"</p>
+            <span class="review-author">- John Doe</span>
+        </div>
+        <div class="review">
+            <p class="review-text">"Worth every penny. Great quality!"</p>
+            <span class="review-author">- Jane Smith</span>
+        </div>
+    </section>
+
+    <!-- Related Products Section -->
+    <section class="related-products">
+        <h2>Related Products</h2>
+        <div class="related-product">
+            <img src="related1.jpg" alt="Related Product 1">
+            <p>Product 1</p>
+            <p>$79.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="related-product">
+            <img src="related2.jpg" alt="Related Product 2">
+            <p>Product 2</p>
+            <p>$89.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="related-product">
+            <img src="related3.jpg" alt="Related Product 3">
+            <p>Product 3</p>
+            <p>$59.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 My E-Commerce Store. All Rights Reserved.</p>
+</footer>
+
+<script>
+    // Image Thumbnail Click Event
+    const thumbnails = document.querySelectorAll('.thumbnail');
+    const mainImg = document.getElementById('main-img');
+
+    thumbnails.forEach(thumbnail => {
+        thumbnail.addEventListener('click', function () {
+            mainImg.src = this.src;
+        });
+    });
+</script>
+
+</body>
+</html>
